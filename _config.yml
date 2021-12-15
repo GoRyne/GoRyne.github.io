@@ -13,7 +13,7 @@ instagram_username: 1in_a_hundred
 linkedin_username:
 
 # Add your google-analytics ID here to activate google analytics
-google_analytics: UA-XXXXXXXXX-X # out your google-analytics code
+google_analytics: G-CCDHNBS6PC # out your google-analytics code
 
 comment:
   provider: "disqus"
