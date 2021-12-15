@@ -1,9 +1,9 @@
 title: GoRyne's blog
-email: your-email@example.com
-description: A Blog Theme by Start Bootstrap
+email: korsogogii@kookmin.ac.kr
+description: It's GoRyne's blog!
 author: Start Bootstrap
 baseurl: "/startbootstrap-clean-blog-jekyll"
-url: "https://goryne.github.io/"
+url: "https://github.com/GoRyne/GoRyne.github.io/tree/testLayout"
 
 # Social Profiles
 twitter_username: SBootstrap
