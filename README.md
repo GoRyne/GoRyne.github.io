@@ -1,11 +1,10 @@
-
 # How i build github.io
 1. ruby환경 세팅
 2. jekyll 설치
 3. theme 적용
 4. 댓글창
 5. favicon 추가
-
+6. **[GoRyne's blog](https://goryne.github.io/)**
 
 </br></br>
 ## Ruby 환경 세팅
