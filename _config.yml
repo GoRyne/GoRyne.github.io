@@ -1,7 +1,7 @@
 title: GoRyne's blog
 email: korsogogii@kookmin.ac.kr
 description: It's GoRyne's blog!
-author: Start Bootstrap
+author: GoRyne
 #baseurl: ""
 url: "https://goryne.github.io/"
 
@@ -14,6 +14,11 @@ linkedin_username:
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics: UA-XXXXXXXXX-X # out your google-analytics code
+
+comment:
+  provider: "disqus"
+  disqus::
+    shortname: "GoRyne"
 
 # Build settings
 markdown: kramdown
