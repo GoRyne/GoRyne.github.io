@@ -68,6 +68,7 @@ favicon으로 쓸 이미지를 파일로 저장하고 **[여기](https://www.fav
 </br></br></br></br>
 ## 혹시라도 jekyll 테마에 관해서 궁금증이 있으시다면 밑을 참고해주세요!
 
+</br></br>
 # [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) - Official Jekyll Version
 
 [Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) is a stylish, responsive blog theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working contact form powered by [Formspree](https://formspree.io/).
