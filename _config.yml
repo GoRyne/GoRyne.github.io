@@ -3,7 +3,7 @@ email: korsogogii@kookmin.ac.kr
 description: It's GoRyne's blog!
 author: Start Bootstrap
 baseurl: "/startbootstrap-clean-blog-jekyll"
-url: "https://github.com/GoRyne/GoRyne.github.io/tree/testLayout"
+url: "https://goryne.github.io/"
 
 # Social Profiles
 twitter_username: SBootstrap
