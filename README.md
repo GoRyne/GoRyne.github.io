@@ -1,134 +1,80 @@
+
+# How i build github.io
+1. ruby환경 세팅
+2. jekyll 설치
+3. theme 적용
+4. 댓글창
+5. favicon 추가
+
+
+</br></br>
+## Ruby 환경 세팅
+Jekyll을 사용하기 위해선 ruby 환경을 먼저 셋팅해야 하며 윈도우 사용자의 경우엔 루비 인스톨러가 선행적으로 설치 되어야 한다.
+
+**[루비 인스톨러 링크](https://rubyinstaller.org/downloads/)** </br>
+**[루비 다운로드 링크](https://www.ruby-lang.org/ko/downloads/)**
+
+</br></br>
+## Jekyll 설치
+루비가 정상적으로 설치 되었다면 지킬은 아래의 명령어로 쉽게 설치 가능하다</br>
+`gem install jekyll bundler`</br></br>
+
+github.io 레포지토리에서 `jekyll new . --force` 명령어를 통해서 기본 틀을 만들 수 있으며 정상적으로 만들어졌는지 확인하기 위해 `jekyll serve` 명령어를
+사용하면 된다. </br></br>
+
+`C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/jekyll-4.2.0/lib/jekyll/commands/serve/servlet.rb:3:in require: cannot load such file -- webrick (LoadError)`
+이런 오류가 발생했을 땐  `bundle add webrick' 명령어를 사용하면 된다.
+
+</br></br>
+## Theme 적용
+테마를 적용하기 위해선 먼저 **[여기](https://jekyll-themes.com/free/)** 와 같은 jekyll 테마를 모아둔 곳에서 원하는 테마를 선택한 후 그대로 github.io에 덮어쓰거나
+원하는 테마를 선택한 후 로컬에 다운로드 받은 후 다운로드 받은 파일을 github.io 레포지토리에 덮어쓰면 된다.</br></br>
+테마를 적용한 후 css에러가 나왔다면 `_config.yml` 파일에서  `baseurl` 과 `url`이 정상적인 위치를 가리키고 있는지 확인한다.
+만약 건드리기 전이라면 `url: username.github.io` 형식으로 바꿔주면 정상적으로 작동된다.
+
+</br></br>
+## 댓글창 
+댓글창을 위해서 **[disqus](https://disqus.com)** 의 기능을 이용하였다. 
+</br>
+</br>
+먼저 **[disqus](https://disqus.com)** 를 누르면 링크로 이동하게 된다.
+</br>
+</br>
+disqus 회원가입 후 플랫폼에 jekyll을 선택하고 추가 설정을 해준다.
+</br>
+설정을 마친 후 `_config.yml` 파일에 
+</br>
+```
+comment:
+  provider: "disqus"
+  disqus:
+    shortname: "본인이 disqus에서설정한 이름"
+```
+해당 코드를 추가해 준다</br></br>
+
+이후 disqus에서 아무런 플랫폼을 선택하지 않았을 때 나오는 Universal code를 `_layout/post.html` 파일에 원하는 위치에 추가해준다
+</br></br>
+여기까지 끝났다면 앞으로 댓글기능이 달리길 원하는 post에 `comments: true` 를 적어주면 끝난다.
+
+
+</br></br>
+## Favicon 추가
+favicon으로 쓸 이미지를 파일로 저장하고 **[여기](https://www.favicon-generator.org/)** 에서 해당 이미지를 .ico 형식으로 바꿔준다
+</br></br>
+이후 `본인의 문서가 정의된 html 파일` 에서 `<link rel="icon" type="image/png" href="ico경로">` 를 적어주면 끝난다. 
+
+
+
+
+</br></br></br></br>
+## 혹시라도 jekyll 테마에 관해서 궁금증이 있으시다면 밑을 참고해주세요!
+
 # [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) - Official Jekyll Version
 
 [Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) is a stylish, responsive blog theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working contact form powered by [Formspree](https://formspree.io/).
 
 This repository holds the official Jekyll version of the Clean Blog theme on Start Bootstrap!
 
-## Preview
-
-[![Clean Blog (Jekyll) Preview](https://startbootstrap.com/assets/img/screenshots/themes/clean-blog-jekyll.png)](http://StartBootstrap.github.io/startbootstrap-clean-blog-jekyll/)
-
-**[View Live Preview](http://StartBootstrap.github.io/startbootstrap-clean-blog-jekyll/)**
-
-## Installation & Setup
-
-### Using RubyGems
-
-When installing the theme using RubyGems, demo images, posts, and pages are not included. Follow the instructions below for complete setup.
-
-1. (Optional) Create a new Jekyll site: `jekyll new my-site`
-2. Replace the current theme in your `Gemfile` with `gem "jekyll-theme-clean-blog"`.
-3. Install the theme (run the command inside your site directory): `bundle install`
-4. Replace the current theme in your `_config.yml` file with `theme: jekyll-theme-clean-blog`.
-5. Build your site: `bundle exec jekyll serve`
-
-Assuming there are no errors and the site is building properly, follow these steps next:
-
-1. Create the following pages if they do not exist already (or change the extension of existing markdown files from `.md` to `.html`):
-
-   * `index.html` - set to `layout: home`
-   * `about.html` - set to `layout: page`
-   * `contact.html` - set to `layout: page`
-   * `posts/index.html` - set to `layout: page` (you will also need to create a `posts` directory)
-
-2. Configure the `index.html` front matter. Example:
-
-    ```markdown
-    ---
-    layout: home
-    background: '/PATH_TO_IMAGE'
-    ---
-    ```
-
-3. Configure the `about.html`, `contact.html`, and `posts/index.html` front matter. Example:
-
-    ```markdown
-    ---
-    layout: page
-    title: Page Title
-    description: This is the page description.
-    background: '/PATH_TO_IMAGE'
-    ---
-    ```
-
-4. For each post in the `_posts` directory, update the front matter. Example:
-
-    ```markdown
-    ---
-    layout: post
-    title: "Post Title"
-    subtitle: "This is the post subtitle."
-    date: YYYY-MM-DD HH:MM:SS
-    background: '/PATH_TO_IMAGE'
-    ---
-    ```
-
-    For reference, look at the [demo repository](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll) to see how the files are set up.
-
-5. Add the form to the `contact.html` page. Add the following code to your `contact.html` page:
-
-    ```html
-    <form name="sentMessage" id="contactForm" novalidate>
-      <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-          <label>Name</label>
-          <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-          <label>Email Address</label>
-          <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="form-group col-xs-12 floating-label-form-group controls">
-          <label>Phone Number</label>
-          <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-          <label>Message</label>
-          <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <br>
-      <div id="success"></div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
-      </div>
-    </form>
-    ```
-
-    Make sure you have the `email` setting in your `_config.yml` file set to a working email address! Once this is set, fill out the form and then check your email, verify the email address using the link sent to you by Formspree, and then the form will be working!
-
-6. Build your site: `bundle exec jekyll serve`
-
-### Using Core Files
-
-When using the core files, the demo images, posts, and pages are all included with the download. After following the instructions below, you can then go and change the content of the pages and posts.
-
-1. [Download](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/archive/master.zip) or Clone the repository.
-2. Update the following configuration settings in your `_config.yml` file:
-
-    * `baseurl`
-    * `url`
-    * `title`
-    * `email` (after setting this setting to a working email address, fill out the form on the contact page and send it - then check your email and verify the address and the form will send you messages when used)
-    * `description`
-    * `author`
-    * `twitter_username` (Optional)
-    * `facebook_username` (Optional)
-    * `github_username` (Optional)
-    * `linkedin_username` (Optional)
-    * `instagram_username` (Optional)
-
-3. Build your site: `bundle exec jekyll serve`
 
 ## Bugs and Issues
 
