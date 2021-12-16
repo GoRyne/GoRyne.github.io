@@ -1,0 +1,40 @@
+I"�<h1 id="google-analytics-적용하기">Google Analytics 적용하기</h1>
+
+<h2 id="1-analytics-가입">1. Analytics 가입</h2>
+<ul>
+  <li>구글 계정으로 Google Analytics에 접속을 한다.</li>
+  <li>Google Analytics 시작하기를 눌러 가입을 한다.</li>
+  <li>가입 절차를 진행하면서 세부적인 권한이나 정보를 입력한다.</li>
+  <li>통계 플랫폼을 웹으로 설정해주고 웹사이트 이름을 내가 식별하기 편한 이름으로 설정해준다.</li>
+  <li>구글 애널리틱스 설정이 끝났다.</li>
+</ul>
+
+<h2 id="2-analytics-적용하기">2. Analytics 적용하기</h2>
+<ul>
+  <li>본인의 include 디렉토리에 <code class="language-plaintext highlighter-rouge">google-analytics.html</code> 파일이 있는지 확인해준다.</li>
+  <li>만약 없다면 아래의 코드를 include 디렉토리에 <code class="language-plaintext highlighter-rouge">google-analytics.html</code> 라는 이름으로 저장후 붙여넣어 준다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-CCDHNBS6PC"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CCDHNBS6PC');
+&lt;/script&gt;
+</code></pre></div></div>
+<ul>
+  <li>
+    <p>이후 <code class="language-plaintext highlighter-rouge">config.yml</code> 파일에 아래의 코드를 붙여준다</p>
+
+    <p>google_analytics: ‘추적ID’</p>
+  </li>
+  <li>
+    <p>여기 까지 정상적으로 끝마쳤다면</p>
+  </li>
+</ul>
+
+<p><img src="/img/alaytics.png" height="730" width="209" /></p>
+
+:ET
