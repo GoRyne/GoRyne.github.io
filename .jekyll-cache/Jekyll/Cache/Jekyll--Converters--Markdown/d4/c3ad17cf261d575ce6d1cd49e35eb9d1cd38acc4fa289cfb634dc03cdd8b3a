@@ -1,0 +1,13 @@
+I"�<h1 id="jekyll-이란">Jekyll 이란?</h1>
+
+<p>&lt;/br&gt;
+텍스트 변환 엔진으로, 마크업 언어로 글을 작성하면 미리 정해진 규칙에 따라 정적인 웹사이트를 만들어 준다.
+&lt;/br&gt;
+이 과정에서 다른 서버 소프트웨어가 필요 없기 때문에 매우 빠르고 가볍다는 장점을 가지고 있다.
+&lt;/br&gt;
+Github.io로 간편히 나만의 블로그를 만들 수 있다는 장점을 가지고 빠르게 성장했지만 최근에는 React 기반의 
+Gatsby와 Github Action등의 등장으로 대세에선 밀려나고 있는 중이다.
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;</p>
+
+<h1 id="directory-구조">Directory 구조</h1>
+:ET
